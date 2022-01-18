@@ -1,0 +1,30 @@
+{
+  "name": "economy-discord.js",
+  "version": "1.0.0",
+  "description": "A discord.js economy package for MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "discord-currency",
+    "discord-economy",
+    "mongodb",
+    "mongoose"
+  ],
+  "dependencies": {
+    "mongoose": "^5.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sonichigo/economy-discord.js.git"
+  },
+  "author": "Sonichigo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sonichigo/economy-discord.js/issues"
+  },
+  "homepage": "https://github.com/Sonichigo/economy-discord.js#readme"
+}
