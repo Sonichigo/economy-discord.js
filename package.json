@@ -1,7 +1,7 @@
 {
-  "name": "economy-discord.js",
+  "name": "mongo-discord.js",
   "version": "0.1.0",
-  "description": "A discord.js economy package for MongoDB.",
+  "description": "A discord.js package for MongoDB.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/Sonichigo/economy-discord.js/issues"
   },
-  "homepage": "https://github.com/Sonichigo/economy-discord.js#readme"
+  "homepage": "https://github.com/Sonichigo/economy-discord.js#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  }
 }

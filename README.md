@@ -1,15 +1,15 @@
-[![NPM](https://nodei.co/npm/economy-discord.js.png)](https://www.npmjs.com/package/economy-discord.js/)
+[![NPM](https://nodei.co/npm/mongo-discord.js.png)](https://www.npmjs.com/package/mongo-discord.js/)
 
-# economy-discord.js
+# mongo-discord.js
 A npm package for making economy bots.
 
 # Installation
-```npm i economy-discord.js```
+```npm i mongo-discord.js```
 
 # Starting
-Start off by connecting economy-discord.js to MongoDB.
+Start off by connecting mongo-discord.js to MongoDB.
 ```js
-const mongoEconomy = require('economy-discord.js');
+const mongoEconomy = require('mongo-discord.js');
 
 mongoEconomy.connect('some connection string');
 ```
@@ -37,7 +37,7 @@ Generates a leaderboard.
 
 ##### Wallet Command
 ```js
-    const mongoEconomy = require('economy-discord.js');
+    const mongoEconomy = require('mongo-discord.js');
     const { MessageEmbed } = require('discord.js');
 
     const member = message.mentions.members.first() || message.member;
@@ -53,7 +53,7 @@ Generates a leaderboard.
 
 ##### Coin Command
 ```js
-    const mongoEconomy = require('economy-discord.js');
+    const mongoEconomy = require('mongo-discord.js');
 
     const randomCoins = Math.floor(Math.random() * 99) + 1; // Random amount of coins.
     
@@ -62,7 +62,7 @@ Generates a leaderboard.
 
 ##### Leaderboard Command
 ```js
-    const mongoEconomy = require('economy-discord.js');
+    const mongoEconomy = require('mongo-discord.js');
     const { MessageEmbed } = require('discord.js');
     
     const leaderboard = await mongoEconomy.generateLeaderboard(message.guild.id, 10);
