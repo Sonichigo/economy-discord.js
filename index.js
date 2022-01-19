@@ -95,7 +95,7 @@ class mongoCurrency {
             const newData = new economyModel({
                 userId: userId,
                 guildId: guildId,
-                Wallet: 0
+                Wallet: 50
             });
 
             await newData.save()
@@ -137,7 +137,7 @@ class mongoCurrency {
         let newData = new economyModel({
             userId: userId,
             guildId: guildId,
-            Wallet: 0
+            Wallet: 50
         });
 
         await newData.save()
