@@ -6,4 +6,4 @@ const EconomySchema = new mongoose.Schema({
     Wallet: Number
 });
 
-module.exports = mongoose.model('currency', EconomySchema);
+module.exports = mongoose.model('economy', EconomySchema);
