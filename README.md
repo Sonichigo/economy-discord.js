@@ -30,9 +30,6 @@ Deducts coins from a user.
 ##### findUser(userId, guildId)
 Finds the user in the database.
 
-##### generateLeaderboard(guildId, amount)
-Generates a leaderboard.
-
 # Command Examples
 
 ##### Wallet Command
