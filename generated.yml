@@ -1,0 +1,61 @@
+databaseChangeLog:
+- changeSet:
+    id: baseline-collections-orders
+    author: Animesh
+    changes:
+    - createCollection:
+        collectionName: orders
+        options: '{}'
+    - createIndex:
+        collectionName: orders
+        keys: '{"userId": 1, "status": 1, "orderDate": -1, "totalAmount": 1}'
+        options: '{"name": "orders_user_status_idx", "unique": false}'
+- changeSet:
+    id: baseline-collections-people
+    author: Animesh
+    changes:
+    - createCollection:
+        collectionName: people
+        options: '{"validator": {"$jsonSchema": {"bsonType": "object", "required":
+          ["name", "email"], "properties": {"name": {"bsonType": "string", "description":
+          "must be a string and is required"}, "age": {"bsonType": "int", "minimum":
+          0, "description": "must be an integer >= 0"}, "email": {"bsonType": "string",
+          "pattern": "^.+@.+$", "description": "must be a valid email address"}}}},
+          "validationLevel": "moderate", "validationAction": "error"}'
+    - createIndex:
+        collectionName: people
+        keys: '{"name": 1}'
+        options: '{"name": "idx_name", "unique": false}'
+    - createIndex:
+        collectionName: people
+        keys: '{"email": 1}'
+        options: '{"name": "idx_email_unique", "unique": true}'
+        unique: true
+- changeSet:
+    id: baseline-collections-users
+    author: Animesh
+    changes:
+    - createCollection:
+        collectionName: users
+        options: '{"validator": {"$jsonSchema": {"bsonType": "object", "required":
+          ["name", "email"], "properties": {"name": {"bsonType": "string", "description":
+          "User''s full name"}, "email": {"bsonType": "string", "description": "User''s
+          email address"}, "status": {"bsonType": "string", "enum": ["active", "inactive",
+          "pending"], "description": "Account status"}}}}, "validationLevel": "strict",
+          "validationAction": "warn"}'
+    - createIndex:
+        collectionName: users
+        keys: '{"email": 1}'
+        options: '{"name": "idx_email_unique", "unique": true}'
+        unique: true
+    - createIndex:
+        collectionName: users
+        keys: '{"status": 1, "createdAt": -1}'
+        options: '{"name": "idx_status_created", "unique": false}'
+- changeSet:
+    id: baseline-collections-products
+    author: Animesh
+    changes:
+    - createCollection:
+        collectionName: products
+        options: '{}'
