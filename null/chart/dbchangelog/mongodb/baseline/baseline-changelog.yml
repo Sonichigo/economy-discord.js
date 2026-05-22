@@ -1,0 +1,17 @@
+databaseChangeLog:
+- changeSet:
+    id: baseline-collections-harness_products
+    author: Harness
+    changes:
+    - createCollection:
+        collectionName: harness_products
+        options: '{}'
+    - createIndex:
+        collectionName: harness_products
+        keys: '{"productId": 1}'
+        options: '{"name": "idx_product_id", "unique": true}'
+        unique: true
+    - createIndex:
+        collectionName: harness_products
+        keys: '{"name": 1, "price": -1}'
+        options: '{"name": "idx_name_price"}'
